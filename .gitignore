@@ -1,34 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@lucvsbraga 
-rg3915
-/
-django2-pythonclub
-1
-23
-Code
-Issues
-Pull requests
-1
-Actions
-Projects
-Wiki
-Security
-Insights
-django2-pythonclub/.gitignore
-@rg3915
-rg3915 Initial commit
-Latest commit 1b7cbf3 on Mar 21, 2019
- History
- 1 contributor
-104 lines (84 sloc)  1.17 KB
- 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -130,4 +99,7 @@ venv.bak/
 
 # mkdocs documentation
 /site
+
+# mypy
+.mypy cache/
 
