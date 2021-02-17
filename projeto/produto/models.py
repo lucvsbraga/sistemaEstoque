@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models.fields import CharField
+from django.urls import reverse_lazy
 
 # Create your models here.
 class Produto(models.Model):
@@ -15,3 +16,6 @@ class Produto(models.Model):
         
     def __str__(self):
         return self.produto
+    
+    def get_aboslute_url(self):
+        return reverse_lazy('produto:produto_detail', kwargs={'pk': self.pk})
