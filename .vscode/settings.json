@@ -2,8 +2,11 @@
     "python.pythonPath": ".venv/bin/python",
     "cSpell.words": [
         "asgi",
+        "formated",
+        "funcionario",
         "minimo",
         "preco",
-        "timeit"
+        "timeit",
+        "zfill"
     ]
 }
