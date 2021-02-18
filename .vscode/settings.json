@@ -3,10 +3,16 @@
     "cSpell.words": [
         "asgi",
         "formated",
+        "formset",
         "funcionario",
         "minimo",
         "preco",
         "timeit",
         "zfill"
+    ],
+    "cSpell.ignoreWords": [
+        "http",
+        "redirect",
+        "response"
     ]
 }

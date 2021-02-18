@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     
     #Apps de terceiros
     'widget_tweaks',
+    'bootstrapform',
     
     #Meus apps
     'projeto.core',
