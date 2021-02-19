@@ -7,11 +7,15 @@
 * Execute as migrações.
 
 ```
-git clone
-cd
+git clone https://github.com/lucvsbraga/sistemaEstoque.git
+cd sistemaEstoque
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python contrib/env_gen.py
 python manage.py migrate
 ```
+## Links
+
+[Materia de Apoio - Régis do Python](https://www.youtube.com/playlist?list=PLsGCdfxkV9uqj9DwI6Y72JyvXeA-9mAjc)
+
