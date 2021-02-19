@@ -13,7 +13,10 @@
         "zfill"
     ],
     "cSpell.ignoreWords": [
+        "default",
+        "example",
         "http",
+        "navbars",
         "redirect",
         "response"
     ]
