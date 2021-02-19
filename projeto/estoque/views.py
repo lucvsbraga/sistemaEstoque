@@ -1,11 +1,10 @@
-from django.core.exceptions import RequestDataTooBig
 from django.forms.models import inlineformset_factory
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, resolve_url
-from projeto.estoque.forms import EstoqueForm, EstoqueItensForm
 from projeto.produto.models import Produto
-from .forms import EstoqueForm, EstoqueItensForm
 from .models import Estoque, EstoqueEntrada, EstoqueSaida, EstoqueItens
+from .forms import EstoqueForm, EstoqueItensForm
+
 
 def estoque_entrada_list(request):
     template_name='estoque_entrada_list.html'
@@ -13,11 +12,13 @@ def estoque_entrada_list(request):
     context={'object_list': objects}
     return render(request, template_name, context)
 
+
 def estoque_entrada_detail(request, pk):
     template_name='estoque_entrada_detail.html'
     obj = EstoqueEntrada.objects.get(pk=pk)
     context={'object': obj}
     return render(request, template_name, context)
+
 
 def dar_baixa_estoque(form):
     # Pega os produtos a partir da instância do formulário (Estoque)
@@ -28,6 +29,7 @@ def dar_baixa_estoque(form):
         produto.save()
     print('Estoque atualizado com sucesso.')
 
+
 def estoque_entrada_add(request):
     template_name='estoque_entrada_form.html'
     estoque_form=Estoque()
@@ -37,6 +39,8 @@ def estoque_entrada_add(request):
         formset = item_estoque_formset(request.POST, instance=estoque_form, prefix='estoque')
         if form.is_valid() and formset.is_valid():
             form=form.save()
+            form.movimento='e'
+            form.save()
             formset.save()
             dar_baixa_estoque(form)
             url='estoque:estoque_entrada_detail'
@@ -69,6 +73,8 @@ def estoque_saida_add(request):
         formset = item_estoque_formset(request.POST, instance=estoque_form, prefix='estoque')
         if form.is_valid() and formset.is_valid():
             form=form.save()
+            form.movimento='s'
+            form.save()
             formset.save()
             dar_baixa_estoque(form)
             url='estoque:estoque_saida_detail'
