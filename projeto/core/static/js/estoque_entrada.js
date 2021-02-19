@@ -17,7 +17,7 @@ $(document).ready(function() {
         $('#id_estoque-TOTAL_FORMS').attr('value', count + 1);
 
         // Desabilita o  campo 'Saldo'
-        $('#id_estoque-'+ (count) +'-saldo').prop('type', 'hidden')
+        $('#id_estoque-' + (count) +  '-saldo').prop('type', 'hidden')
 
 
         // some animate to scroll to view our new form
