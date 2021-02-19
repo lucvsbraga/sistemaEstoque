@@ -8,6 +8,7 @@
         "minimo",
         "preco",
         "timeit",
+        "tmpl",
         "zfill"
     ],
     "cSpell.ignoreWords": [
