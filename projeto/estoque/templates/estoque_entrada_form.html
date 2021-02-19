@@ -125,7 +125,7 @@
 
         $.ajax({
             url: url,
-            type: GET,
+            type: 'GET',
             success: function(response) {
                 estoque = response.data[0].estoque
                 campo = self.attr('id').replace('produto', 'quantidade')
@@ -133,18 +133,19 @@
                 $('#' + campo).val('')
             },
             error: function(xhr){
-
+                //body
             }
         })
     });
 
-    $('document').on('change', '.clQuantidade', function(){
+    $(document).on('change', '.clQuantidade', function(){
         quantidade = $(this).val();
         saldo = Number(quantidade) + Number(estoque);
         campo = $(this).attr('id').replace('quantidade', 'saldo')
         //Atribui o saldo ao campo 'saldo'
-        $('#' + campo).val(saldo)
+        $('#'+campo).val(saldo)
     });
+    
 </script>
 
 <script type="text/html" id="item-estoque">
