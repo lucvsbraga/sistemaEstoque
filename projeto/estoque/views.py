@@ -55,7 +55,7 @@ def dar_baixa_estoque(form):
 
 def estoque_add(request, template_name, movimento, url):
     estoque_form=Estoque()
-    item_estoque_formset = inlineformset_factory(Estoque, EstoqueItens, form=EstoqueItensForm, extra=0, min_num=1, validate_min=True)
+    item_estoque_formset = inlineformset_factory(Estoque, EstoqueItens, form=EstoqueItensForm, extra=0, can_delete=False, min_num=1, validate_min=True)
     if request.method == 'POST':
         form = EstoqueForm(request.POST, instance=estoque_form,prefix='main')
         formset = item_estoque_formset(request.POST, instance=estoque_form, prefix='estoque')
