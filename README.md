@@ -17,5 +17,5 @@ python manage.py migrate
 ```
 ## Links
 
-[Materia de Apoio - Régis do Python](https://www.youtube.com/playlist?list=PLsGCdfxkV9uqj9DwI6Y72JyvXeA-9mAjc)
+[Material de Apoio - Régis do Python](https://www.youtube.com/playlist?list=PLsGCdfxkV9uqj9DwI6Y72JyvXeA-9mAjc)
 
